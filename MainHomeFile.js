@@ -5,6 +5,7 @@ import {View, Text} from 'react-native';
 import HomeScreen from './HomeScreen';
 import ProductCategory from './ProductCategory';
 import ProductInfo from './ProductInfo';
+//import Items from './Items';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,6 +16,7 @@ export default function MainHomeFile() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="ProductCategory" component={ProductCategory} />
         <Stack.Screen name="ProductInfo" component={ProductInfo} />
+       {/* // <Stack.Screen name="Items" component={Items} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
