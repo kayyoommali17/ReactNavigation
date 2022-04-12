@@ -7,6 +7,8 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Register from './Register'
 import Login from './Login';
 import HomeScreen from './HomeScreen';
+import MyNetwork from './MyNetwork';
+import Post from './Post';
 
 
 const Tab = createBottomTabNavigator();
@@ -25,7 +27,40 @@ export default function MainHomeFile() {
                 source={
                   focused
                     ? require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/home.png')
-                    : require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/HomeLight12.jpeg')
+                    : require('/Users/appinventiv/Desktop/Proj/src/assests/images/MyProjectImages/home1.png')
+                }
+                style={{width: 20, height: 20}}
+              />
+            ),
+          }}
+        />
+         <Tab.Screen
+          name="MyNetwork"
+          component={MyNetwork}
+          options={{
+            tabBarIcon: ({focused}) => (
+              <Image
+                source={
+                  focused
+                    ? require('/Users/appinventiv/Desktop/Proj/src/assests/images/MyProjectImages/group.png')
+                    : require('/Users/appinventiv/Desktop/Proj/src/assests/images/MyProjectImages/group1.png')
+                }
+                style={{width: 20, height: 20}}
+              />
+            ),
+          }}
+        />
+        
+        <Tab.Screen
+          name="Post"
+          component={Post}
+          options={{
+            tabBarIcon: ({focused}) => (
+              <Image
+                source={
+                  focused
+                    ? require('/Users/appinventiv/Desktop/Proj/src/assests/images/MyProjectImages/add.png')
+                    : require('/Users/appinventiv/Desktop/Proj/src/assests/images/MyProjectImages/add1.png')
                 }
                 style={{width: 20, height: 20}}
               />

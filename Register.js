@@ -147,14 +147,7 @@ import {
             </Text>
           </View>
           <TouchableOpacity
-            onPress={() => {
-              x = validate();
-              if (x === true) {
-                alert('Matched ');
-              } else {
-                alert('not Matched');
-              }
-            }}>
+           >
             <Text style={styles.RegisterButton}>{'Register'}</Text>
           </TouchableOpacity>
           <View>
