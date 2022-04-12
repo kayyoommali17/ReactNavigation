@@ -1,15 +1,64 @@
-import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity,
+  Pressable,
+  Image,
+  ScrollView,
+} from 'react-native';
 import React from 'react';
-import {useNavigation} from '@react-navigation/native';
 
-export default function HomeScreen() {
-  const navigation = useNavigation();
+export default function HomeScreen({navigation}) {
+  
   return (
-    <View style={styles.Container}>
-      <Text>{'Home Screen'}</Text>
-      <View>
-        <TouchableOpacity onPress={()=>navigation.navigate('ProductCategory')}>
-          <Text style={styles.txt}>{'Go To Product Category'}</Text>
+    <View>
+      {/* <ScrollView> */}
+      <View style={styles.DetailsBlock}>
+        <TouchableOpacity onPress={()=>{navigation.navigate('Profile')}} >
+          <Image
+            source={require('/Users/appinventiv/Desktop/Proj/src/assests/images/MyProjectImages/Iphone.jpeg')}
+            style={styles.profileimage} 
+          />
+        </TouchableOpacity>
+      </View>
+      <Text style={styles.txt}>{'First Name'}</Text>
+      <Text style={styles.txt1}>{'. Following'}</Text>
+
+      <Text style={styles.txt2}>{'All Details are here...'}</Text>
+
+      <View style={styles.ImageContainer}>
+        <Image
+          style={{height: 230, width: '100%'}}
+          source={require('/Users/appinventiv/Desktop/Proj/src/assests/images/MyProjectImages/Iphone.jpeg')}
+        />
+      </View>
+      <View style={{flexDirection: 'row',justifyContent:'space-around'}}>
+        <TouchableOpacity>
+          <Image
+           resizeMode='contain'
+            style={styles.likeComment}
+            source={require('/Users/appinventiv/Desktop/Proj/src/assests/images/MyProjectImages/like.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Image 
+          resizeMode='contain'
+            style={styles.likeComment} //use justificonent-- space betwwen
+            source={require('/Users/appinventiv/Desktop/Proj/src/assests/images/MyProjectImages/comment.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Image
+            style={styles.likeComment}
+            source={require('/Users/appinventiv/Desktop/Proj/src/assests/images/MyProjectImages/share.png')}
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Image
+            style={styles.likeComment}
+            source={require('/Users/appinventiv/Desktop/Proj/src/assests/images/MyProjectImages/send.png')}
+          />
         </TouchableOpacity>
       </View>
     </View>
@@ -17,14 +66,47 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  Container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    //backgroundColor:'yellow'
+  txt: {
+    //color: 'blue',
+    marginTop: 5,
+    marginLeft: 75,
+    fontWeight: 'bold',
+    //position:'absolute'
   },
-  txt:{
-      color:'blue',
-      
-  }
+  txt1: {
+    marginLeft: 155,
+    color: 'grey',
+    bottom: 16,
+  },
+  txt2: {
+    // marginTop:23,
+    marginLeft: 75,
+    color: 'grey',
+    bottom: 10,
+  },
+  profileimage: {
+    width: 60,
+    height: 60,
+    borderRadius: 50,
+    position: 'absolute',
+  },
+  DetailsBlock: {
+    flexDirection: 'row',
+    marginTop: 20,
+    marginLeft: 5,
+  },
+  ImageContainer: {
+    marginTop: 30,
+  },
+  likeComment: {
+    height: 20,
+    width: 20,
+  //  marginLeft: 30,
+    marginTop: 16,
+    
+  },
+  DetailsBlock2: {
+    flexDirection: 'row',
+    marginTop: 50,
+  },
 });

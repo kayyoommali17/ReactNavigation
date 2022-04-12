@@ -4,11 +4,9 @@ import React from 'react';
 import {View, Text, Image} from 'react-native';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-
-import ProductCategory from './ProductCategory'
 import Register from './Register'
-import ProductInfo from './ProductInfo';
-import Login from './Login'
+import Login from './Login';
+import HomeScreen from './HomeScreen';
 
 
 const Tab = createBottomTabNavigator();
@@ -19,17 +17,17 @@ export default function MainHomeFile() {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
-          name="ProductCategory"
-          component={ProductCategory}
+          name="HomeScreen"
+          component={HomeScreen}
           options={{
             tabBarIcon: ({focused}) => (
               <Image
                 source={
                   focused
-                    ? require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/edit.png')
-                    : require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/edit.png')
+                    ? require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/home.png')
+                    : require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/HomeLight12.jpeg')
                 }
-                style={{width: 20, height: 20,borderRadius:50}}
+                style={{width: 20, height: 20}}
               />
             ),
           }}
@@ -42,10 +40,10 @@ export default function MainHomeFile() {
               <Image
                 source={
                   focused
-                    ? require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/edit.png')
-                    : require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/edit.png')
+                    ? require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/edit1.png')
+                    : require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/editLight.png')
                 }
-                style={{width: 20, height: 20,borderRadius:50}}
+                style={{width: 20, height: 20}}
               />
             ),
           }}
@@ -58,10 +56,10 @@ export default function MainHomeFile() {
               <Image
                 source={
                   focused
-                    ? require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/edit.png')
-                    : require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/edit.png')
+                    ? require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/user.png')
+                    : require('/Users/appinventiv/Desktop/Proj/src/assests/images/CrossImage/LoginLight.png')
                 }
-                style={{width: 20, height: 20,borderRadius:50}}
+                style={{width: 20, height: 20}}
               />
             ),
           }}

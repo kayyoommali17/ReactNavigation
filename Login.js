@@ -10,7 +10,7 @@ import {
   } from 'react-native';
   import React, {useState} from 'react';
   
-  export default function Login() {
+  export default function Login({navigation}) {
     const [hidePass, setPass] = useState(true);
     const [email, setEmail] = useState('');
   
@@ -85,7 +85,7 @@ import {
           <Text style={styles.register}>
             {'Not Registered Yet?'}{' '}
          
-              <Text style={styles.Reg}>{'Register'}</Text>
+              <Text style={styles.Reg} onPress={()=>{navigation.navigate('Register')}} >{'Register'}</Text>
             
           </Text>
         </View>

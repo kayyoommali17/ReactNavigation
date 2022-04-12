@@ -9,6 +9,7 @@ import {
     Image,
   } from 'react-native';
   import React, {useState} from 'react';
+
   
   export default function Register({navigation}) {
     const [hidePassFirst, setPasFirst] = useState(true);
@@ -159,9 +160,9 @@ import {
           <View>
             <Text style={styles.AlreadyTxt}>
               {'Already Have an Account?'}{' '}
-              <TouchableOpacity>
-                <Text style={styles.Login}>{'Login'}</Text>
-              </TouchableOpacity>
+              
+                <Text  style={styles.Login} onPress={()=>{navigation.navigate('Login')}} >{'Login'}</Text>
+           
             </Text>
           </View>
         </View>
@@ -215,7 +216,7 @@ import {
     },
     AlreadyTxt: {
       textAlign: 'center',
-      marginBottom: 20,
+      marginTop:28 ,
     },
     eye: {
       height: '4%',
