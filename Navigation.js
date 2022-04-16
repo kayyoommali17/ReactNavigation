@@ -4,23 +4,35 @@ import React from 'react';
 import {View, Text, Image} from 'react-native';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Register from './Register'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+import Register from './Register';
 import Login from './Login';
 import HomeScreen from './HomeScreen';
 import MyNetwork from './MyNetwork';
 import Post from './Post';
-
+import Profile from './Profile'
 
 const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
+function  NestedNavigation(){
+  return (
+      <Stack.Navigator>
+        <Stack.Screen name='Home' component={HomeScreen}/>
+        <Stack.Screen name="Profile" component={Profile} />
+      </Stack.Navigator>
+  );
+
+}
 
 export default function MainHomeFile() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
-          name="HomeScreen"
-          component={HomeScreen}
+          name="Home"
+          component={NestedNavigation}
           options={{
             tabBarIcon: ({focused}) => (
               <Image
@@ -34,7 +46,7 @@ export default function MainHomeFile() {
             ),
           }}
         />
-         <Tab.Screen
+        <Tab.Screen
           name="MyNetwork"
           component={MyNetwork}
           options={{
@@ -50,7 +62,7 @@ export default function MainHomeFile() {
             ),
           }}
         />
-        
+
         <Tab.Screen
           name="Post"
           component={Post}
@@ -99,7 +111,6 @@ export default function MainHomeFile() {
             ),
           }}
         />
-        
       </Tab.Navigator>
     </NavigationContainer>
   );

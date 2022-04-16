@@ -3,10 +3,17 @@ import React from 'react'
 
 export default function MyNetwork() {
   return (
-    <View>
-      <Text>{'MyNetwork'}</Text>
+    <View style={styles.MainView}>
+      <Text >{'MyNetwork'}</Text>
     </View>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    MainView:{
+        flex:1,
+        alignItems:'center',
+        justifyContent:'center',
+        backgroundColor:"green"
+    }
+})

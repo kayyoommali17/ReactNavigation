@@ -181,7 +181,7 @@ import {
       marginBottom: 20,
     },
     inputEmail: {
-      height: '7%',
+      height: 50,
       borderWidth: 1,
       padding: 10,
       marginLeft: 17,
@@ -189,7 +189,7 @@ import {
       marginBottom: 17,
       borderColor: '#EEEEEE',
       borderWidth: 1,
-      paddingBottom: 5,
+      paddingBottom: 22,
     },
     imageback: {
       height: 200,
@@ -205,11 +205,11 @@ import {
       margin: 23,
       paddingTop: 8,
       height: 50,
-      marginTop: 40,
+      marginTop: 27,
     },
     AlreadyTxt: {
       textAlign: 'center',
-      marginTop:28 ,
+      marginTop:30 ,
     },
     eye: {
       height: '4%',
@@ -221,7 +221,7 @@ import {
     },
     MainPass: {
       borderColor: '#EEEEEE',
-      height: '7%',
+      height: 53,
       marginLeft: 17,
       marginRight: 17,
       marginBottom: 17,
@@ -229,8 +229,8 @@ import {
       padding: 10,
     },
     Check: {
-      marginLeft: 20,
-      marginTop: 20,
+      marginLeft: 30,
+      marginTop: 1,
       flexDirection: 'row',
     },
     Agree: {
